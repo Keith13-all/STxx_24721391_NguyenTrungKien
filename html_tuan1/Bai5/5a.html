@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Classic Movie Day</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 750px;
+            margin: 30px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 12px;
+        }
+        /* Tiêu đề chính của bảng */
+        .main-title {
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        /* Hàng tiêu đề giờ chiếu */
+        .time-header th {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        /* Cột tên màn chiếu bên trái */
+        .screen-col {
+            font-weight: bold;
+            width: 110px;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <!-- Tiêu đề lớn bên trên bảng -->
+        <tr>
+            <td colspan="5" class="main-title">Classic Movie Day</td>
+        </tr>
+        
+        <!-- Hàng tiêu đề các khung giờ -->
+        <tr class="time-header">
+            <td></td>
+            <th>5 pm</th>
+            <th>7 pm</th>
+            <th>9 pm</th>
+            <th>11 pm</th>
+        </tr>
+
+        <!-- Dòng 1: Screen one (Đã sửa lại đúng mẫu) -->
+        <tr>
+            <td class="screen-col">Screen<br>one</td>
+            <td>Star Wars</td>
+            <td>Empire Strikes Back</td>
+            <td>Return of the Jedi</td>
+            <td>The Exorcist</td>
+        </tr>
+
+        <!-- Dòng 2: Screen two -->
+        <tr>
+            <td class="screen-col">Screen<br>two</td>
+            <td colspan="2">Dances with Wolves</td>
+            <td colspan="2">Gone With the Wind</td>
+        </tr>
+
+        <!-- Dòng 3: Screen three -->
+        <tr>
+            <td class="screen-col">Screen<br>three</td>
+            <td colspan="2">2001: A Space Odyssey</td>
+            <td>The Conversation</td>
+            <td>5 Easy Pieces</td>
+        </tr>
+    </table>
+
+</body>
+</html>
