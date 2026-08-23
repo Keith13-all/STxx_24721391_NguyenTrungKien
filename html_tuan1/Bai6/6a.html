@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            /* Căn giữa form trên trang */
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 30px;
+            background-color: #ffffff;
+        }
+
+        .form-container {
+            background-color: #99ccff; /* Màu nền xanh của form */
+            width: 600px;
+            padding: 20px 30px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #444444; /* Màu chữ xám tối theo yêu cầu */
+            box-sizing: border-box;
+        }
+
+        .header-banner {
+            background-color: #00ffff; /* Màu xanh ngọc của logo */
+            border: 2px solid #000;
+            display: inline-block;
+            padding: 5px 40px;
+            border-radius: 8px;
+            box-shadow: 4px 4px 0px #888888; /* Đổ bóng xám */
+            font-size: 26px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000000; /* Chữ trong logo màu đen */
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .form-container h3 {
+            margin: 0 0 10px 0;
+            color: #222222; /* Tiêu đề xám rất đậm/đen */
+            font-size: 20px;
+        }
+
+        .form-container p.subtitle {
+            margin: 0 0 25px 0;
+            font-size: 15px;
+        }
+
+        .form-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .form-table td {
+            padding: 5px 0;
+            vertical-align: middle;
+        }
+
+        .form-table > tbody > tr > td:first-child {
+            width: 25%;
+        }
+
+        .form-container input[type="text"], .form-container select, .form-container textarea {
+            border: 1px solid #aaa;
+            padding: 3px;
+        }
+
+        .form-container hr {
+            border: 0;
+            border-top: 1px solid #777; /* Dòng gạch ngang xám */
+            margin: 15px 0;
+        }
+
+        .inner-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .inner-table td {
+            padding: 2px 0;
+        }
+
+        .btn-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-group button {
+            padding: 3px 12px;
+            margin: 0 5px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <!-- Phần Header -->
+        <div class="text-center">
+            <div class="header-banner">
+                Jackson<br>Electronics
+            </div>
+            <h3>Registration Form</h3>
+            <p class="subtitle">Register your Jackson Electronics product here</p>
+        </div>
+
+        <form>
+            <!-- Phần thông tin cá nhân -->
+            <table class="form-table">
+                <tr>
+                    <td>First Name:</td>
+                    <td>
+                        <input type="text" name="firstName" style="width: 130px;"> 
+                        &nbsp;&nbsp;Last Name: 
+                        <input type="text" name="lastName" style="width: 130px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address #1:</td>
+                    <td><input type="text" name="address1" style="width: 80%;"></td>
+                </tr>
+                <tr>
+                    <td>Address #2:</td>
+                    <td><input type="text" name="address2" style="width: 80%;"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>
+                        <input type="text" name="city" style="width: 130px;">
+                        &nbsp;State: <input type="text" name="state" style="width: 40px;">
+                        &nbsp;Zip: <input type="text" name="zip" style="width: 60px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td><input type="text" name="country" value="United States" style="width: 130px;"></td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <!-- Phần thông tin sản phẩm -->
+            <table class="form-table">
+                <tr>
+                    <td>Product:</td>
+                    <td>
+                        <select name="product">
+                            <option value="ScanMaster">ScanMaster</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date Purchased:</td>
+                    <td><input type="text" name="datePurchased" style="width: 130px;"></td>
+                </tr>
+                <tr>
+                    <td>Serial #:</td>
+                    <td><input type="text" name="serial" style="width: 130px;"></td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding-top: 5px;">Used for:</td>
+                    <td>
+                        <table class="inner-table">
+                            <tr>
+                                <td><label><input type="radio" name="usedFor" value="Home" checked> Home</label></td>
+                                <td><label><input type="radio" name="usedFor" value="Educational"> Educational Institution</label></td>
+                            </tr>
+                            <tr>
+                                <td><label><input type="radio" name="usedFor" value="Business"> Business</label></td>
+                                <td><label><input type="radio" name="usedFor" value="Other"> Other</label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><label><input type="radio" name="usedFor" value="Government"> Government</label></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding-top: 5px;">System (check all that apply):</td>
+                    <td>
+                        <table class="inner-table">
+                            <tr>
+                                <td><label><input type="checkbox" name="system" value="Windows"> Windows</label></td>
+                                <td><label><input type="checkbox" name="system" value="UNIX"> UNIX</label></td>
+                            </tr>
+                            <tr>
+                                <td><label><input type="checkbox" name="system" value="Macintosh"> Macintosh</label></td>
+                                <td><label><input type="checkbox" name="system" value="Other"> Other</label></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <!-- Phần comment và nút bấm -->
+            <table class="form-table">
+                <tr>
+                    <td style="vertical-align: top; padding-top: 5px;">Comments?:</td>
+                    <td><textarea name="comments" rows="5" style="width: 95%;"></textarea></td>
+                </tr>
+            </table>
+
+            <div class="btn-group">
+                <button type="button">Click to register</button>
+                <button type="button">Click to cancel</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
