@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Example Cafe Menu</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fff;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .menu-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+  }
+
+  /* ---------- Header + Title ---------- */
+  h1.menu-title {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #b22222;
+    font-size: 28px;
+    margin: 0;
+    padding: 15px 0;
+    background: #fff;
+  }
+
+  /* ---------- Nav bar ---------- */
+  nav.menu-nav {
+    display: flex;
+    align-items: center;
+    background-color: #e78c96;
+    padding: 10px 20px;
+    gap: 0;
+  }
+
+  nav.menu-nav .home-icon {
+    padding-right: 15px;
+    border-right: 1px solid #fff;
+  }
+
+  nav.menu-nav .home-icon img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+
+  nav.menu-nav a.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 0 15px;
+    border-right: 1px solid #fff;
+  }
+
+  nav.menu-nav a.nav-link:hover {
+    text-decoration: underline;
+  }
+
+  nav.menu-nav .search-box {
+    margin-left: auto;
+    display: flex;
+  }
+
+  nav.menu-nav .search-box input[type="text"] {
+    border: none;
+    padding: 5px 8px;
+    width: 150px;
+    font-size: 13px;
+  }
+
+  nav.menu-nav .search-box button {
+    border: none;
+    background: #d9d9d9;
+    padding: 5px 12px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  /* ---------- 3-column layout ---------- */
+  .content-layout {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* ---- Left sidebar ---- */
+  .sidebar-left {
+    width: 160px;
+    padding: 15px 10px;
+    flex-shrink: 0;
+  }
+
+  .side-btn {
+    display: block;
+    background-color: #e78c96;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+  }
+
+  .side-btn:hover {
+    background-color: #d97684;
+  }
+
+  .side-photo {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+    margin-top: 15px;
+  }
+
+  /* ---- Main content ---- */
+  .main-content {
+    flex: 1;
+    padding: 15px 20px;
+  }
+
+  h2.section-title {
+    color: #fff;
+    background-color: #e78c96;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 10px;
+    margin: 15px 0;
+    padding: 6px 10px;
+  }
+
+  ul.menu-list {
+    list-style-type: disc;
+    background-color: #fff;
+    margin: 0;
+    padding: 6px 10px 8px 30px;
+  }
+
+  ul.menu-list li {
+    margin-bottom: 3px;
+    font-size: 15px;
+    color: #000;
+  }
+
+  ul.menu-list li a {
+    color: #b22222;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 4px;
+  }
+
+  li.highlight {
+    color: #b22222;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  a.back-to-top {
+    display: inline-block;
+    color: #b22222;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  /* ---- Form ---- */
+  .info-form {
+    padding: 10px 5px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 12px;
+  }
+
+  .form-row input[type="text"],
+  .form-row input[type="email"],
+  .form-row input[type="tel"],
+  .form-row select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+  .radio-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  textarea.comment-box {
+    width: 100%;
+    height: 90px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    margin-bottom: 12px;
+  }
+
+  .form-actions button {
+    padding: 6px 18px;
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #999;
+    background: #f2f2f2;
+  }
+
+  /* ---- Right sidebar (Events) ---- */
+  .sidebar-right {
+    width: 220px;
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    flex-shrink: 0;
+  }
+
+  .sidebar-right h2 {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+  }
+
+  .event {
+    margin-bottom: 20px;
+  }
+
+  .event h3 {
+    color: #b22222;
+    font-size: 15px;
+    margin: 0 0 8px 0;
+  }
+
+  .event img {
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .event p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .event p a {
+    color: #ff8080;
+    text-decoration: underline;
+  }
+
+  /* ---------- Footer ---------- */
+  footer.site-footer {
+    background-color: #e78c96;
+    color: #7a1f2b;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="menu-container" id="top">
+
+  <h1 class="menu-title">Example Cafe Menu</h1>
+
+  <nav class="menu-nav">
+    <a href="#top" class="home-icon"><img src="/STxx_24721391_NguyenTrungKien/img/Tuan2/Bai1/icons8-home-50.png" alt="Home"></a>
+    <a href="#starter" class="nav-link">STARTER</a>
+    <a href="#main" class="nav-link">MAIN COURSES</a>
+    <a href="#desserts" class="nav-link" style="border-right:none;">DESSERTS</a>
+    <form class="search-box" onsubmit="return false;">
+      <input type="text" placeholder="">
+      <button type="submit">Go</button>
+    </form>
+  </nav>
+
+  <div class="content-layout">
+
+    <!-- Left sidebar -->
+    <aside class="sidebar-left">
+      <a href="#" class="side-btn">Cafe Latte</a>
+      <a href="#" class="side-btn">Cappuccino</a>
+      <a href="#" class="side-btn">Ocean Blue</a>
+      <a href="#" class="side-btn">Ice-cream Cafe</a>
+      <a href="#" class="side-btn">Order Online</a>
+      <img class="side-photo" src="/STxx_24721391_NguyenTrungKien/img/Tuan2/Bai1/company.png" alt="">
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+      <h2 class="section-title" id="starter">Starter</h2>
+      <ul class="menu-list">
+        <li>Chesnut and Mushroom Goujons <a href="#">(v)</a></li>
+        <li>Goat Cheese <a href="#">(v)</a></li>
+        <li class="highlight">Honey Soy Chicken Kebabs <a href="#">(V)</a></li>
+        <li>Seafood Salad <a href="#">(v)</a></li>
+      </ul>
+      <a class="back-to-top" href="#top">Back to Top</a>
+
+      <h2 class="section-title" id="desserts">Desserts</h2>
+      <ul class="menu-list">
+        <li>Lemon Sorbet <a href="#">(v)</a></li>
+        <li>Chocolate Mud Pie <a href="#">(v)</a></li>
+        <li>Pecan Pie <a href="#">(v)</a></li>
+        <li>Selection of fine Cheeses from Around the World <a href="#">(v)</a></li>
+      </ul>
+      <a class="back-to-top" href="#top">Back to Top</a>
+
+      <h2 class="section-title" id="information">Information</h2>
+      <form class="info-form" onsubmit="return false;">
+        <div class="form-row">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+        </div>
+        <div class="form-row">
+          <input type="email" placeholder="Email">
+          <input type="tel" placeholder="Telephone">
+        </div>
+        <div class="form-row">
+          <select>
+            <option>USA</option>
+            <option>Vietnam</option>
+            <option>Other</option>
+          </select>
+          <div class="radio-group">
+            <label><input type="radio" name="nationality"> Vietnamese</label>
+            <label><input type="radio" name="nationality"> Foreigner</label>
+          </div>
+        </div>
+        <textarea class="comment-box" placeholder="Comment"></textarea>
+        <div class="form-actions">
+          <button type="submit">Submit</button>
+          <button type="reset">Cancel</button>
+        </div>
+      </form>
+
+    </main>
+
+    <!-- Right sidebar -->
+    <aside class="sidebar-right">
+      <h2>Events</h2>
+
+      <div class="event">
+        <h3>Regular Meetings</h3>
+        <img src="/STxx_24721391_NguyenTrungKien/img/Tuan2/Bai1/meeting.png" alt="">
+        <p>Host your regular team meetings or activities in the comfort of your own private room. <a href="#">Read more...</a></p>
+      </div>
+
+      <div class="event">
+        <h3>Product Launches</h3>
+        <img src="/STxx_24721391_NguyenTrungKien/img/Tuan2/Bai1/launch.png" alt="">
+        <p>Launch your product with ease in a space that truly fits its image. <a href="#">Read more...</a></p>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    ABC Company &copy; - 12345678 - abccoffee@gmail.com
+  </footer>
+
+</div>
+
+</body>
+</html>

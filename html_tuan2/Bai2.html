@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Yoko's Kitchen</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fff;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+
+  #container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    background-image: url('/STxx_24721391_NguyenTrungKien/img/Tuan2/Bai2/background.png');
+    background-repeat: repeat;
+    background-color: #a49c94;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    gap: 15px;
+  }
+
+  header img.logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  header .title h1 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  header .title p {
+    margin: 2px 0 0 0;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* ---------- Nav ---------- */
+  nav {
+    background-color: #cfc9c2;
+    padding: 10px 25px;
+  }
+
+  nav a {
+    color: #4a4a4a;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin-right: 25px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- Main layout: section + aside ---------- */
+  .main-layout {
+    display: flex;
+    padding: 20px 25px;
+    gap: 25px;
+  }
+
+  section.content {
+    flex: 2;
+  }
+
+  aside {
+    flex: 1;
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+  }
+
+  /* ---------- Article ---------- */
+  article {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  article .media {
+    width: 150px;
+    flex-shrink: 0;
+  }
+
+  article .media img {
+    width: 150px;
+    height: auto;
+    display: block;
+  }
+
+  article .caption {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+    text-align: left;
+  }
+
+  article .text {
+    flex: 1;
+  }
+
+  article h2 {
+    margin: 0 0 3px 0;
+    font-size: 18px;
+    color: #333;
+  }
+
+  article .subheading {
+    color: #d05a7c;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  article p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #555;
+  }
+
+  /* ---------- Aside sections ---------- */
+  aside section {
+    margin-bottom: 25px;
+  }
+
+  aside h2 {
+    color: #d05a7c;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+  }
+
+  aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  aside ul li {
+    margin-bottom: 10px;
+  }
+
+  aside ul li a {
+    color: #d05a7c;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  aside ul li a:hover {
+    text-decoration: underline;
+  }
+
+  aside address {
+    font-style: normal;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background-color: #cfc9c2;
+    color: #555;
+    text-align: left;
+    font-size: 11px;
+    padding: 8px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<div id="container">
+
+  <header>
+    <img class="logo" src="/STxx_24721391_NguyenTrungKien/img/Tuan2/Bai2/logo.png" alt="Logo">
+    <div class="title">
+      <h1>YOKO'S KITCHEN</h1>
+      <p>JAPANESE COOKING CLASSES</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#">home</a>
+    <a href="#">classes</a>
+    <a href="#">catering</a>
+    <a href="#">about</a>
+    <a href="#">contact</a>
+  </nav>
+
+  <div class="main-layout">
+
+    <section class="content">
+
+      <article>
+        <div class="media">
+          <img src="/STxx_24721391_NguyenTrungKien/img/Tuan2/Bai2/bok choi_z.jpg" alt="Bok Choi">
+          <span class="caption">Bok Choi</span>
+        </div>
+        <div class="text">
+          <h2>Japanese Vegetarian</h2>
+          <p class="subheading">Five week course in London</p>
+          <p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
+        </div>
+      </article>
+
+      <article>
+        <div class="media">
+          <img src="/STxx_24721391_NguyenTrungKien/img/Tuan2/Bai2/teriyaki.jpg" alt="Teriyaki Sauce">
+          <span class="caption">Teriyaki Sauce</span>
+        </div>
+        <div class="text">
+          <h2>Sauces Masterclass</h2>
+          <p class="subheading">One day workshop</p>
+          <p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <aside>
+
+      <section>
+        <h2>Popular Recipes</h2>
+        <ul>
+          <li><a href="#">Yakitori (grilled chicken)</a></li>
+          <li><a href="#">Tsukune (minced chicken patties)</a></li>
+          <li><a href="#">Okonomiyaki (savory pancakes)</a></li>
+          <li><a href="#">Mizutaki (chicken stew)</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <address>
+          Yoko's Kitchen<br>
+          27 Redchurch Street<br>
+          Shoreditch<br>
+          London E2 7DP
+        </address>
+      </section>
+
+    </aside>
+
+  </div>
+
+  <footer>
+    &copy; 2011 Yoko's Kitchen
+  </footer>
+
+</div>
+
+</body>
+</html>
