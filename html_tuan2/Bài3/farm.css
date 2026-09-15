@@ -1,0 +1,122 @@
+/* ===== farm.css ===== */
+/* Nhung vao tat ca cac trang bang:
+   <link rel="stylesheet" type="text/css" href="farm.css"> */
+
+/* Toan bo TRANG (ca ngoai le trai/phai) deu phu anh nen texture,
+   khong con khung trang rieng nua - dung nhu ban mau minh hoa:
+   chi CO 2 KHOI TRANG duy nhat la #header va #links (sidebar),
+   con lai (#noidung, address) nam TRUC TIEP tren nen texture nay. */
+body {
+    background-image: url("/STxx_24721391_NguyenTrungKien/img/Tuan2/Bai3/background.jpg");
+    background-repeat: repeat;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+* { box-sizing: border-box; }
+
+/* ---- .content chi dung de GIOI HAN CHIEU RONG va CAN GIUA,
+   KHONG co mau nen rieng -> nen texture cua body van hien ra
+   xuyen suot ben trong no (khong bi che). ---- */
+.content {
+    width: 760px;
+    margin: 0 auto;
+}
+
+/* ---- Header: 1 trong 2 khoi nen TRANG duy nhat.
+   Salogo.gif cua ban da co san chu "Welcome to Sunny Acres"
+   + dia chi trong anh, nen KHONG them the text nao khac o day
+   nua de tranh bi lap lai 2 lan. ---- */
+#header {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+#header img.logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---- Hang chua sidebar + noi dung: KHONG co nen trang chung
+   nua (truoc day gan nen trang ca hang lam mat texture o cot
+   ben phai). overflow:hidden chi de lam clearfix cho 2 cot float. ---- */
+.row {
+    overflow: hidden;
+}
+
+/* ---- Heading dang thanh mau xanh (h2 cho tieu de lon) ---- */
+h2 {
+    width: 480px;
+    padding-left: 15px;
+    font-size: 26px;
+    font-style: italic;
+    letter-spacing: 3px;
+    text-indent: 10px;
+    background-color: #2e8b57;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+/* ---- Heading nho hon (Hours, Directions, Admission...) ---- */
+h3 {
+    width: 380px;
+    padding-left: 15px;
+    background-color: #2e8b57;
+    color: #ffffff;
+}
+
+/* ---- Footer: nam truc tiep tren texture nhung co lop nen
+   trang mo nhe de van doc duoc chu. ---- */
+address {
+    text-align: center;
+    border-top: 2px solid #2e8b57;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    clear: both;
+    font-style: normal;
+    color: #222222;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---- Cac trang thai link ---- */
+a:link      { color: #660099; text-decoration: none; }
+a:visited   { color: #996699; text-decoration: none; }
+a:active    { color: #ff6600; }
+a:hover     { color: #ff0000; text-decoration: underline; }
+
+/* ---- Sidebar lien ket: khoi nen TRANG thu 2. ---- */
+#links {
+    float: left;
+    width: 150px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    padding: 10px;
+}
+
+#links ul { list-style: none; margin: 0; padding: 0; }
+#links li { margin-bottom: 8px; font-weight: bold; }
+
+/* ---- Khoi noi dung chinh: dung nen TRANG MO (khong dac 100%)
+   de van thay hoa van texture "xuyen qua" phia sau (giong ban
+   mau minh hoa) nhung chu van du tuong phan de doc duoc. ---- */
+#noidung {
+    margin-left: 190px;
+    padding: 15px 15px 15px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---- Anh quang cao ben phai noi dung ---- */
+.promo {
+    float: right;
+    width: 220px;
+    margin: 0 0 10px 15px;
+    border: 3px solid #ffffff;
+}
+
+#noidung ul { padding-left: 20px; }
